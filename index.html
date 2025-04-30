@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Kraven's Portfolio</title>
+
+</head>
+
+<body>
+  <nav>
+    <h1>Portfolio</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div id="overlay" onclick="closeMenu()"></div>
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-links" id="sidebar">
+      <a href="#landing" class="nav-link" onclick="closeMenu()"><b>HOME</b></a>
+      <a href="#about" class="nav-link" onclick="closeMenu()"><b>ABOUT ME</b></a>
+      <a href="#projects" class="nav-link" onclick="closeMenu()"><b>PROJECTS</b></a>
+      <a href="#features" class="nav-link" onclick="closeMenu()"><b>ACTIVITIES</b></a>
+      <a href="#contact" class="nav-link" onclick="closeMenu()"><b>CONTACT</b></a>
+    </div>
+  </nav>
+  
+  
+
+  <div id="landing" class="landing scroll-animate">
+    <img src="image/cat4.gif" alt="">
+    <h1 data-text="Hello, I am KRAVEN">Hello, I am KRAVEN</h1>
+  </div>
+  
+  <section id="about" class="scroll-animate">
+    <section class="about-me scroll-animate">
+      <div class="about-text scroll-animate delay-1">
+        <h2>About Me</h2>
+        <p>
+          I’m a third-year Information Technology student at Cavite State University - Silang Campus.
+          I have a strong interest in backend development, networking, and exploring how technology works behind the scenes.
+          In my free time, I enjoy relaxing with my three cats, playing video games, and watching movies.
+          I’m passionate about learning new skills, taking on challenges, and continuously growing in the IT field.
+        </p>
+        <a href="about/resume.pdf" class="resume-link" download="resume">View my Resume Here</a>
+      </div>
+      <div class="about-img scroll-animate delay-2">
+        <img src="image/cat2.gif" alt="About Me Image">
+      </div>
+    </section>
+  </section>
+  
+  <section id="projects" class="projects scroll-animate">
+    <h2>My Projects</h2>
+    <div class="project-gallery">
+      <div class="project-card scroll-animate delay-1">
+        <a href="https://github.com/nagisa314/Black-INK" target="_blank">
+          <img src="projects/blakink.png" alt="Project 1">
+          <p>BLACK INK</p>
+        </a>
+      </div>
+      <div class="project-card scroll-animate delay-2">
+        <a href="https://github.com/nagisa314/PUHON-POS" target="_blank">
+          <img src="projects/PUHONBG.png" alt="Project 2">
+          <p>PUHON POS</p>
+        </a>
+      </div>
+      <div class="project-card scroll-animate delay-3">
+        <a href="https://github.com/nagisa314/ITEC101" target="_blank">
+          <img src="projects/PIZZABG.png" alt="Project 3">
+          <p>PIZZA MOKA</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <div id="features" class="features">
+    <div class="feature-card scroll-animate delay-1" onclick="openPopup('post-test')">
+      <img src="image/ptestand postbg.png" alt="Post-Test">
+      <h1>Post-Test</h1>
+    </div>
+    <div class="feature-card scroll-animate delay-2" onclick="openPopup('quizzes')">
+      <img src="image/quizzesbg.png" alt="Quizzes"> 
+      <h1>Quizzes</h1>
+    </div>
+    <div class="feature-card scroll-animate delay-3" onclick="openPopup('test')">
+      <img src="image/testbg2.png" alt="test">
+      <h1>Test</h1>
+    </div>
+    <div class="feature-card scroll-animate delay-1" onclick="openPopup('activities')">
+      <img src="image/actbg.png" alt="Activities">
+      <h1>Activities</h1>
+    </div>
+  </div>
+  
+  <div id="popup" class="popup">
+    <img id="popup-img" src="" alt="">
+    <p id="popup-text"></p>
+    <div>
+        <button id="prev-btn" onclick="changeImage(-1)">Previous</button>
+        <button id="next-btn" onclick="changeImage(1)">Next</button>
+    </div>
+    <button onclick="closePopup()">Close</button>
+</div>
+  
+  
+  
+  <section id="contact" class="contact scroll-animate">
+    <div class="contact-container scroll-animate">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+        </div>
+        <input type="text" placeholder="Phone Number">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message" rows="6"></textarea>
+        <button type="submit">
+          Submit <span class="plane-icon"></span>
+        </button>
+      </form>
+    </div>
+    
+  </section>
+  
+  <footer class="footer scroll-animate">
+    <div class="social-links">
+      <a href="https://github.com/yourgithubusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://facebook.com/yourfacebookusername" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/yourinstagramusername" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/yourlinkedinusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:kravenanonuevo2@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
